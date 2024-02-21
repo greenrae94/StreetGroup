@@ -14,12 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-// Route::get('/', function () {
-//     return view('csvreader');
-// });
-
 Route::get('/', [CSVReader::class, 'showUploadForm']);
 Route::post('/parse', [CSVReader::class, 'parseCsv'])->name('parse.csv');
